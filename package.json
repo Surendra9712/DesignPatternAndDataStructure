@@ -26,12 +26,12 @@
     "rxjs": "~6.6.3",
     "ts-md5": "^1.2.7",
     "tslib": "^2.0.0",
-    "zone.js": "~0.11.8"
+    "zone.js": "~0.11.4"
   },
   "devDependencies": {
     "@angular-builders/jest": "11.0.0",
-    "@angular-devkit/build-angular": "~0.1102.19",
-    "@angular/cli": "^11.2.19",
+    "@angular-devkit/build-angular": "~12.2.18",
+    "@angular/cli": "^12.2.18",
     "@angular/compiler-cli": "~12.2.17",
     "@types/jasmine": "~3.6.0",
     "@types/jasminewd2": "~2.0.3",
