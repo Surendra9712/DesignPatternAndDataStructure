@@ -10,9 +10,10 @@ describe('FactoryMethodComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [FactoryMethodComponent],
-      imports: [AngularMaterialModule]
-    }).compileComponents();
+    declarations: [FactoryMethodComponent],
+    imports: [AngularMaterialModule],
+    teardown: { destroyAfterEach: false }
+}).compileComponents();
   });
 
   beforeEach(() => {

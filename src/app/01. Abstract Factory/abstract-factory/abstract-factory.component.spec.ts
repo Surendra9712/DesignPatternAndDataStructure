@@ -15,9 +15,10 @@ describe('AbstractFactoryComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [AbstractFactoryComponent],
-      imports: [BrowserAnimationsModule, FormsModule, AngularMaterialModule]
-    }).compileComponents();
+    declarations: [AbstractFactoryComponent],
+    imports: [BrowserAnimationsModule, FormsModule, AngularMaterialModule],
+    teardown: { destroyAfterEach: false }
+}).compileComponents();
   });
 
   beforeEach(() => {

@@ -14,9 +14,10 @@ describe('PrototypeComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [PrototypeComponent],
-      imports: [AngularMaterialModule, FormsModule, BrowserAnimationsModule]
-    }).compileComponents();
+    declarations: [PrototypeComponent],
+    imports: [AngularMaterialModule, FormsModule, BrowserAnimationsModule],
+    teardown: { destroyAfterEach: false }
+}).compileComponents();
   });
 
   beforeEach(() => {

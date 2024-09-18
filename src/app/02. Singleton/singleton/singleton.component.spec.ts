@@ -10,9 +10,10 @@ describe('SingletonComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [SingletonComponent],
-      imports: [AngularMaterialModule]
-    }).compileComponents();
+    declarations: [SingletonComponent],
+    imports: [AngularMaterialModule],
+    teardown: { destroyAfterEach: false }
+}).compileComponents();
   });
 
   beforeEach(() => {

@@ -9,9 +9,10 @@ describe('BuilderComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [BuilderComponent],
-      imports: [AngularMaterialModule]
-    }).compileComponents();
+    declarations: [BuilderComponent],
+    imports: [AngularMaterialModule],
+    teardown: { destroyAfterEach: false }
+}).compileComponents();
   });
 
   beforeEach(() => {

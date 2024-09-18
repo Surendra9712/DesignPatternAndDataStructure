@@ -9,9 +9,10 @@ describe('CommandComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [CommandComponent],
-      imports: [AngularMaterialModule]
-    }).compileComponents();
+    declarations: [CommandComponent],
+    imports: [AngularMaterialModule],
+    teardown: { destroyAfterEach: false }
+}).compileComponents();
   });
 
   beforeEach(() => {
