@@ -1,0 +1,11 @@
+<div>
+    <h2>Binary Search Tree</h2>
+    <input type="number" [(ngModel)]="inputKey" placeholder="Enter a number" />
+    <button (click)="addKey()">Add Key</button>
+    <div>
+      <h3>In-Order Traversal:</h3>
+      <ul>
+        <li *ngFor="let key of bstKeys">{{ key }}</li>
+      </ul>
+    </div>
+</div>

@@ -1,0 +1,21 @@
+<div>
+  <h2>Linked List</h2>
+  <div class="flex">
+    <div class="flex column" style="border-right: 1px solid #cccccc;padding-right: 16px">
+      <input type="text" class="form-control" [(ngModel)]="name" placeholder="Enter name" />
+      <input type="number" class="form-control" [(ngModel)]="newValue" placeholder="Enter value" />
+    </div>
+    <div class="flex column">
+      <button (click)="append()" mat-raised-button color="primary">Append</button>
+      <button (click)="prepend()" mat-raised-button color="primary">Prepend</button>
+      <button (click)="insertAt()" mat-raised-button color="primary">Insert At</button>
+      <button (click)="findIndex()" mat-raised-button color="primary">Index</button>
+      <button (click)="findItem()" mat-raised-button color="primary">Item</button>
+      <button (click)="delete()" mat-raised-button color="warn">Delete</button>
+    </div>
+  </div>
+
+  <ul>
+    <li *ngFor="let value of linkedListDisplay">{{ value.name }} {{value.age}}</li>
+  </ul>
+</div>

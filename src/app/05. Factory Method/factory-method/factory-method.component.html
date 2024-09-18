@@ -1,0 +1,25 @@
+<div class="container">
+  <h1>
+    Factory Method Pattern (Virtual Constructor)
+  </h1>
+  <mat-card>
+    <mat-card-title>
+      Food planning
+    </mat-card-title>
+    <mat-card-actions>
+      <button mat-raised-button (click)="btnEatPizza()" color="primary">Eat Pizza</button>
+      <button mat-raised-button (click)="btnEatWrap()" color="primary"> Eat Wrap</button>
+      <button mat-raised-button (click)="btnEatTacko()" color="primary">Eat Tacko</button>
+      <button mat-raised-button (click)="btnEatMango()" color="primary">Eat Mango</button>
+    </mat-card-actions>
+    <mat-card-content>
+      <div *ngFor="let currentMeal of foodPlanning; trackBy: trackByFn">
+        {{ currentMeal.activity }}
+      </div>
+    </mat-card-content>
+  </mat-card>
+  <div>{{carType.getCarType()}}</div>
+  <select [value]="'mountain'" (change)="changeValue($event.target['value'])">
+    <option *ngFor="let type of ['mountain','everest']" [value]="type">{{type}}</option>
+  </select>
+</div>
