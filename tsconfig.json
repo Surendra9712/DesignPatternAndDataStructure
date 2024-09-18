@@ -8,10 +8,18 @@
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "importHelpers": true,
-    "target": "es2020",
+    "target": "ES2022",
     "module": "esnext",
-    "typeRoots": ["node_modules/@types"],
-    "lib": ["es2017", "esnext.array", "esnext.asynciterable", "dom", "dom.iterable"],
+    "typeRoots": [
+      "node_modules/@types"
+    ],
+    "lib": [
+      "es2017",
+      "esnext.array",
+      "esnext.asynciterable",
+      "dom",
+      "dom.iterable"
+    ],
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": "./",
@@ -24,11 +32,20 @@
     "strictBindCallApply": true,
     "resolveJsonModule": true,
     "paths": {
-      "@abstract-factory": ["./src/app/01. Abstract Factory/*"],
-      "@singleton": ["./src/app/02. Singleton/*"],
-      "@prototype": ["./src/app/03. Prototype/*"],
-      "@builder": ["./src/app/04. Builder/*"]
-    }
+      "@abstract-factory": [
+        "./src/app/01. Abstract Factory/*"
+      ],
+      "@singleton": [
+        "./src/app/02. Singleton/*"
+      ],
+      "@prototype": [
+        "./src/app/03. Prototype/*"
+      ],
+      "@builder": [
+        "./src/app/04. Builder/*"
+      ]
+    },
+    "useDefineForClassFields": false
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,
