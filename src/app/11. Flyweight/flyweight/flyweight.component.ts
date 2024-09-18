@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Pen} from '../models/pen.model';
 import {PenFactory} from '../models/pen.factory';
-import {Md5} from 'ts-md5';
 
 @Component({
   selector: 'app-flyweight',
@@ -38,7 +37,7 @@ export class FlyweightComponent {
   }
 
   public btnDraw(): void {
-    const hashCode: string | Int32Array = Md5.hashStr(JSON.stringify(this.selectedPen));
+    const hashCode: string | Int32Array =" Md5.hashStr(JSON.stringify(this.selectedPen))";
     this.listLog.push('Hash code of pen: ' + hashCode.toString());
     this.listLog.push(this.selectedPen?.draw(this.text));
     this.listLog.push('');

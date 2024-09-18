@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AbstractTheme, Theme } from '../models/theme.model';
 import { DarkThemeFactory, LightThemeFactory, PersonalThemeFactory } from '../models/factory.model';
-import { $e } from 'codelyzer/angular/styles/chars';
 
 @Component({
   selector: 'app-abstract-factory',

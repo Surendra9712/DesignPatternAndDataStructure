@@ -72,19 +72,19 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "design-patterns-in-angular:build",
-            "port": 4201
+            "port": 4200,
+            "buildTarget": "design-patterns-in-angular:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "design-patterns-in-angular:build:production"
+              "buildTarget": "design-patterns-in-angular:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "design-patterns-in-angular:build"
+            "buildTarget": "design-patterns-in-angular:build"
           }
         },
         "test": {
