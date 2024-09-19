@@ -1,0 +1,21 @@
+<div>
+  <h2>Queue</h2>
+  <div class="flex">
+    <div class="flex column" style="border-right: 1px solid #cccccc;padding-right: 16px">
+      <input type="number" class="form-control" [(ngModel)]="item" placeholder="Enter value" />
+    </div>
+    <div class="flex column">
+      <button (click)="enqueueItem()" mat-raised-button>Enqueue</button>
+      <button (click)="dequeueItem()" mat-stroked-button>Dequeue</button>
+      <button (click)="peekItem()" mat-stroked-button>Peek</button>
+      <button (click)="clearQueue()" mat-raised-button color="warn">Clear</button>
+    </div>
+  </div>
+  <div>
+    <h3>Current Queue:</h3>
+    <ul>
+      <li *ngFor="let i of queue.getItems()">{{ i }}</li>
+    </ul>
+    <h4 *ngIf="peekedItem">Peeked Item: {{ peekedItem }}</h4>
+  </div>
+</div>

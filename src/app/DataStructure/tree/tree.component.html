@@ -1,11 +1,53 @@
 <div>
-    <h2>Binary Search Tree</h2>
-    <input type="number" [(ngModel)]="inputKey" placeholder="Enter a number" />
-    <button (click)="addKey()">Add Key</button>
-    <div>
-      <h3>In-Order Traversal:</h3>
-      <ul>
-        <li *ngFor="let key of bstKeys">{{ key }}</li>
-      </ul>
+  <h2>Binary Search Tree</h2>
+  <div class="flex">
+    <div class="flex column" style="border-right: 1px solid #cccccc;padding-right: 16px">
+      <input type="number" class="form-control" [(ngModel)]="inputKey" placeholder="Enter value" />
     </div>
+    <div class="flex column">
+      <button (click)="addKey()" mat-raised-button color="primary">Add</button>
+      <button (click)="search()" mat-raised-button>Search</button>
+      <button (click)="performPreOrder()" mat-stroked-button color="primary">Pre-order Traversal</button>
+      <button (click)="performInOrder()" mat-stroked-button color="primary">In-order Traversal</button>
+      <button (click)="performPostOrder()" mat-stroked-button color="primary">Post-order Traversal</button>
+      <button (click)="bfsTraversing()" mat-stroked-button color="primary">BFS Traversal</button>
+      <button (click)="findMin()" mat-stroked-button color="primary">Minimum</button>
+      <button (click)="findMax()" mat-stroked-button color="primary">Maximum</button>
+      <button (click)="removeNode()" mat-raised-button color="warn">Remove</button>
+    </div>
+  </div>
+  @if (postOrderResult.length) {
+    Pre-order traversal result: {{ preOrderResult.join(', ') }}
+  }
+  @if (postOrderResult.length) {
+    <p>
+      Post-order traversal result: {{ postOrderResult.join(', ') }}
+    </p>
+  }
+  @if (bfsResult.length) {
+    <p>
+     Breadth First Search result: {{ bfsResult.join(', ') }}
+    </p>
+  }
+
+  @if (minValue) {
+    <p>
+      Min node value: {{ minValue }}
+    </p>
+  }
+  @if (maxValue) {
+    <p>
+      Max node value: {{ maxValue }}
+    </p>
+  }
+  @if (searchValue) {
+    <p>
+      Search node value: {{ searchValue }}
+    </p>
+  }
+  <ul>
+    @for (value of bstKeys; track value) {
+      <li>{{ value }}</li>
+    }
+  </ul>
 </div>

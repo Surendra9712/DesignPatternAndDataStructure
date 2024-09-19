@@ -1,0 +1,22 @@
+<div>
+  <h2>Stack</h2>
+  <div class="flex">
+    <div class="flex column" style="border-right: 1px solid #cccccc;padding-right: 16px">
+      <input type="number" class="form-control" [(ngModel)]="item" placeholder="Enter value" />
+    </div>
+    <div class="flex column">
+      <button (click)="pushItem()" mat-raised-button>Push</button>
+      <button (click)="popItem()" mat-stroked-button>Pop</button>
+      <button (click)="peekItem()" mat-stroked-button>Peek</button>
+      <button (click)="clearStack()" mat-raised-button color="warn">Clear</button>
+    </div>
+  </div>
+  <div>
+
+    <h3>Current Stack:</h3>
+    <ul>
+      <li *ngFor="let i of stack.getItems()">{{ i }}</li>
+    </ul>
+    <h4 *ngIf="peekedItem">Peeked Item: {{ peekedItem }}</h4>
+  </div>
+</div>
