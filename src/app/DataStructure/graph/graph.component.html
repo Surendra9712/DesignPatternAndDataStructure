@@ -1,0 +1,67 @@
+<div class="flex column" style="align-items: center;gap: 8px">
+  <div style="border-bottom: 1px solid #cccccc; margin-bottom: 16px">
+    <div class="flex">
+      <div class="flex column" style="border-right: 1px solid #cccccc;padding-right: 16px">
+        <input type="text" class="form-control" [(ngModel)]="nodeValue" placeholder="Enter value" />
+      </div>
+      <div class="flex">
+        <button (click)="addNode()" mat-raised-button color="primary">Create Node/Vertex</button>
+        <button (click)="removeNode()" mat-raised-button color="warn">Remove Node</button>
+      </div>
+    </div>
+    <div class="flex column" style="justify-content: center;align-items: center;gap: 0;margin-top: 16px">
+      <h3 style="margin-bottom: 0">Nodes</h3>
+      <ul>
+        @for (node of graph.getNodes(); track node) {
+          <li>{{ node.value }}</li>
+        }
+      </ul>
+    </div>
+  </div>
+  <div class="flex">
+    <div style="border-right: 1px solid #cccccc;padding-right: 16px">
+      <div class="flex">
+        <input type="text" class="form-control" [(ngModel)]="fromNode" placeholder="From Node" />
+        <input type="text" class="form-control" [(ngModel)]="toNode" placeholder="To Node" />
+      </div>
+    </div>
+    <div class="flex column">
+      <button (click)="createDirectedEdge()" mat-raised-button>Create Directed Edge</button>
+      <button (click)="createUndirectedEdge()" mat-raised-button>Create Undirected Edge</button>
+      <button (click)="remove()" mat-raised-button color="warn">Remove Edge</button>
+    </div>
+  </div>
+
+  <div
+    style="margin-top: 10px;text-align: center; display: flex; flex-direction: column; align-items: center;border-bottom: 1px solid #abab">
+    <h3>Adjacency Matrix</h3>
+    <table>
+      @for (row of graph.getAdjacencyMatrix(); track row) {
+        <tr>
+          @for (value of row; track value) {
+            <td>{{ value }}</td>
+          }
+        </tr>
+      }
+    </table>
+  </div>
+  <div>
+    <h3>Adjacency List</h3>
+    <ul>
+      <div *ngFor="let item of adjacencyList|keyvalue">
+        <div class="flex" style="gap: 8px">
+          {{ item.key }} ->
+          <div>
+            [
+            @for (pair of item.value; track pair; ) {
+              <span>{{ pair.value }}@if (!$last) {
+                ,
+              }</span>
+            }
+            ]
+          </div>
+        </div>
+      </div>
+    </ul>
+  </div>
+</div>

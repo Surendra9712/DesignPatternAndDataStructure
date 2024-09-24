@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { Queue } from '../models/Queue';
 
 @Component({
-  selector: 'app-linked-list',
+  selector: 'app-queue',
   templateUrl: './queue.component.html',
   styleUrls: ['./queue.component.scss']
 })

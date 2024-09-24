@@ -10,9 +10,10 @@ import { TreeComponent } from './tree/tree.component';
 import { RouteComponent } from './route/route.component';
 import { StackComponent } from './stack/stack.component';
 import { QueueComponent } from './queue/queue.component';
+import { GraphComponent } from './graph/graph.component';
 
 @NgModule({
-  declarations: [LinkedListComponent, TreeComponent, RouteComponent,StackComponent,QueueComponent],
+  declarations: [LinkedListComponent, TreeComponent, RouteComponent,StackComponent,QueueComponent,GraphComponent],
   imports: [CommonModule, DataStructureRoutingModule, FormsModule, MatButtonModule, MatInputModule]
 })
 export class DataStructureModule {}

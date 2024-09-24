@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { Stack } from '../models/Stack';
 
 @Component({
-  selector: 'app-linked-list',
+  selector: 'app-stack',
   templateUrl: './stack.component.html',
   styleUrls: ['./stack.component.scss']
 })

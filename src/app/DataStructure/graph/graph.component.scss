@@ -1,0 +1,13 @@
+.form-control{
+  outline: none;
+  border: 1px solid #cccc;
+  padding: 10px;
+  border-radius: 4px;
+}
+.flex{
+  display: flex;
+  gap: 24px;
+}
+.column{
+  flex-direction: column;
+}
